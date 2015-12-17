@@ -6,5 +6,5 @@ install:
     - docker login --email=$DOCKER_HUB_EMAIL --username=$DOCKER_HUB_USERNAME --password=$DOCKER_HUB_PASSWORD
 
 script:
-    - docker build -t kevinjcash/serviceB .
-    - docker push kevinjcash/serviceB
+    - docker build -t kevinjcash/serviceb .
+    - docker push kevinjcash/serviceb
