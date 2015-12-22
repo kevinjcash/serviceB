@@ -1,8 +1,13 @@
-FROM ubuntu
+# serviceB
+FROM debian
 MAINTAINER Kevin Cashman
 
-RUN apt-get update
-RUN apt-get install -y python python-dev python-distribute python-pip
+EXPOSE 5000
+
+RUN apt-get update && apt-get install -y \
+        python \
+        python-pip \
+    && apt-get clean
 RUN pip install flask
 RUN mkdir /opt/app
 
